@@ -40,7 +40,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 19, TypeScript, Vite, Tailwind CSS, Lucide Icons, React Router DOM.
+- **Frontend**: React 19, Next.js App Router, JavaScript/JSX, Tailwind CSS, DaisyUI, Lucide Icons.
 - **Backend**: Python 3.11+, FastAPI, SQLAlchemy Async, SQLite (aiosqlite), Pydantic v2, JWT (python-jose), Bcrypt.
 - **ML & Triage**: Custom Rule-based Clinical Triage Engine & Vision Assessment Prototype.
 - **DevOps**: Docker, Docker Compose, GitHub Actions CI/CD workflows.
@@ -60,6 +60,7 @@ python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
 # 2. In a separate terminal, start Frontend
 cd frontend
 npm install
+copy .env.example .env.local
 npm run dev
 ```
 
@@ -67,4 +68,4 @@ npm run dev
 ```bash
 docker-compose up --build
 ```
-Open **http://localhost:5173** in your browser.
+Open **http://localhost:3000** in your browser.

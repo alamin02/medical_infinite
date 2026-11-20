@@ -240,7 +240,7 @@ async def seed():
             db.add(SystemSetting(key=key, value=value, description=desc))
 
         await db.commit()
-        print("✅ Database seeded successfully!")
+        print("Database seeded successfully!")
         print("\nDemo Credentials:")
         print("  Admin:  admin@medinexa.ai / Admin123!")
         print("  Doctor: doctor@medinexa.ai / Doctor123!")

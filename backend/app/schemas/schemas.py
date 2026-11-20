@@ -43,18 +43,6 @@ class LoginRequest(BaseModel):
     password: str
 
 
-class TokenResponse(BaseModel):
-    access_token: str
-    refresh_token: str
-    token_type: str = "bearer"
-    user: "UserResponse"
-
-
-class RefreshRequest(BaseModel):
-    refresh_token: str
-
-
-# --- User ---
 class UserResponse(BaseModel):
     id: int
     email: str
@@ -71,6 +59,18 @@ class UserResponse(BaseModel):
         from_attributes = True
 
 
+class TokenResponse(BaseModel):
+    access_token: str
+    refresh_token: str
+    token_type: str = "bearer"
+    user: UserResponse
+
+
+class RefreshRequest(BaseModel):
+    refresh_token: str
+
+
+# --- User ---
 class UserUpdateRequest(BaseModel):
     full_name: Optional[str] = None
     phone: Optional[str] = None

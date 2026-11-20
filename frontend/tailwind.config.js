@@ -1,12 +1,21 @@
+import daisyui from 'daisyui';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,jsx}",
+    "./src/components/**/*.{js,jsx}",
+    "./src/context/**/*.{js,jsx}",
   ],
   theme: {
     extend: {
       colors: {
+        blush: '#F7CBCA',
+        taupe: '#DDD3D3',
+        offwhite: '#F1F7F7',
+        aquamist: '#D5E5E5',
+        seafoam: '#BDD7D8',
+        slateteal: '#5D6B6B',
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -38,9 +47,34 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Space Grotesk', 'Plus Jakarta Sans', 'sans-serif'],
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        medinexa: {
+          primary: '#5D6B6B',
+          'primary-content': '#F1F7F7',
+          secondary: '#BDD7D8',
+          'secondary-content': '#5D6B6B',
+          accent: '#F7CBCA',
+          'accent-content': '#5D6B6B',
+          neutral: '#5D6B6B',
+          'neutral-content': '#F1F7F7',
+          'base-100': '#F1F7F7',
+          'base-200': '#D5E5E5',
+          'base-300': '#DDD3D3',
+          'base-content': '#5D6B6B',
+          info: '#BDD7D8',
+          success: '#BDD7D8',
+          warning: '#F7CBCA',
+          error: '#F7CBCA',
+        },
+      },
+    ],
+  },
+  plugins: [daisyui],
 }

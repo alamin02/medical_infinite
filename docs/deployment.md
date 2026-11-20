@@ -25,9 +25,12 @@ Backend API and Swagger UI will be running at `http://localhost:8000/docs`.
 ```bash
 cd frontend
 npm install
+# Windows PowerShell: Copy-Item .env.example .env.local
+# Linux/macOS:
+cp .env.example .env.local
 npm run dev
 ```
-Frontend web application will be live at `http://localhost:5173`.
+Frontend web application will be live at `http://localhost:3000`. The default API URL is `http://localhost:8000/api/v1`; set `NEXT_PUBLIC_API_URL` in `.env.local` if the backend runs elsewhere.
 
 ---
 
@@ -36,6 +39,6 @@ To run the full stack (FastAPI Backend + React Frontend + Seeded SQLite):
 ```bash
 docker-compose up --build
 ```
-- Frontend: `http://localhost:5173`
+- Frontend: `http://localhost:3000`
 - Backend API: `http://localhost:8000`
 - Swagger Docs: `http://localhost:8000/docs`

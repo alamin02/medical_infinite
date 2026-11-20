@@ -6,7 +6,7 @@ Medinexa AI is designed as a modular full-stack digital health application combi
 ```
 +-----------------------------------------------------------+
 |                     Client Layer                          |
-|         React 19 + TypeScript + Vite + Tailwind CSS       |
+|   Next.js App Router + React 19 + JSX + Tailwind/DaisyUI  |
 |    - User Dashboard   - Doctor Dashboard   - Admin Suite  |
 +-----------------------------------------------------------+
                              |
